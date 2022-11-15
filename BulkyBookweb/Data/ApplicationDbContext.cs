@@ -1,6 +1,8 @@
-﻿namespace BulkyBookweb.Data
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace BulkyBookweb.Data
 {
-    public class ApplicationDbContext
+    public class ApplicationDbContext :DbContext
     {
     }
 }
