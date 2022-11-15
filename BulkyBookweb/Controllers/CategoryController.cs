@@ -14,8 +14,8 @@ namespace BulkyBookweb.Controllers
 
          public IActionResult Index()
         {
-            var objCategoryList=_db.Categories.ToList();
-            return View();
+           IEnumerator<Category> objCategoryList=_db.Categories;
+            return View(bjCategoryList);
         }
     }
 }
