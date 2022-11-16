@@ -34,7 +34,7 @@ namespace BulkyBookweb.Controllers
         {
             if (obj.Name == obj.DisplayOrder.ToString()) 
             {
-                ModelState.AddModelError("CustomError", "DispayOrder cannot exactly match the Name.");
+                ModelState.AddModelError("Name", "DispayOrder cannot exactly match the Name.");
             }
             if (ModelState.IsValid)
             {
