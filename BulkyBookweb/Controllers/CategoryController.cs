@@ -50,9 +50,18 @@ namespace BulkyBookweb.Controllers
         //GET
         public IActionResult Edit(int? id)
         {
-            if(id==null || id == 0 )
-            return View();
+            if(id==null || id == 0)
+            {
+                return NotFound();
+            }
+            var categoryFromDb = _db.Categories.Find(id);
+            if (categoryFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(categoryFromDb);
         }
+
 
 
         //POST
