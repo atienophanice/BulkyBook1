@@ -39,7 +39,7 @@ namespace BulkyBookweb.Controllers
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(obj)
+            return View(obj);
         }
 
 
