@@ -15,16 +15,17 @@ namespace BulkyBookweb.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Category> objCategoryList =_db.Categories;
+            IEnumerable<Category> objCategoryList = _db.Categories;
             return View(objCategoryList);
         }
 
         //GET
         public IActionResult Create()
         {
-            
+
             return View();
         }
+
 
         //POST
         [HttpPost]
@@ -38,3 +39,6 @@ namespace BulkyBookweb.Controllers
     }
 
 }
+
+
+
