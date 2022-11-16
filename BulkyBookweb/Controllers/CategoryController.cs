@@ -47,6 +47,34 @@ namespace BulkyBookweb.Controllers
         }
 
 
+        //GET
+        public IActionResult Edit(int? id)
+        {
+
+            return View();
+        }
+
+
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Category obj)
+        {
+            if (obj.Name == obj.DisplayOrder.ToString())
+            {
+                ModelState.AddModelError("Name", "DispayOrder cannot exactly match the Name.");
+            }
+            if (ModelState.IsValid)
+            {
+
+                _db.Categories.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
+
+
     }
 
 }
