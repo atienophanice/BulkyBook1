@@ -10,22 +10,26 @@
             <div class=" mb-3">
                 <label asp-for="Id"></label>
                 <input asp-for="Id" class=" form-control"/>
+                <span asp-validation-for="Id" class=" text-danger"></span>
                 
 
             </div>
             <div class=" mb-3">
                 <label asp-for="Name"></label>
                 <input asp-for="Name" class=" form-control"/>
+                <span asp-validation-for="Name" class=" text-danger"></span>
                 
        </div>
             <div class=" mb-3">
                 <label asp-for="DisplayOrder"></label>
                 <input asp-for="DisplayOrder" class=" form-control" />
+                <span asp-validation-for="DisplayOrder" class=" text-danger"></span>
                
             </div>
             <div class=" mb-3">
                 <label asp-for="CreatedDateTime" ></label>
                 <input asp-for="CreatedDateTime" class=" form-control"/>
+                <span asp-validation-for="CreatedDateTime" class=" text-danger"></span>
                
        </div>
 
